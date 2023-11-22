@@ -1,4 +1,4 @@
-import Component from 'react'
+import {Component} from 'react'
 
 import './App.css'
 
@@ -86,7 +86,7 @@ class App extends Component {
     isTrue: false,
   }
 
-  FilterFunction = value => {
+  FillFunction = value => {
     const {latestHistoryList} = this.state
     const newHistoryList = latestHistoryList.filter(
       eachValue => eachValue.id !== value,
@@ -140,7 +140,7 @@ class App extends Component {
               {newHistoryList.map(eachObject => (
                 <li
                   key={eachObject.id}
-                  uniqueId={eachObject.id}
+                  id={eachObject.id}
                   className="items-holder"
                 >
                   <p className="time">{eachObject.timeAccessed}</p>
